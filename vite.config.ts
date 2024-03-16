@@ -1,6 +1,7 @@
-import { readFileSync } from 'fs'
+import { readFileSync, writeFileSync } from 'fs'
 import { resolve } from 'path'
 import react from '@vitejs/plugin-react'
+import { preserveDirectives } from 'rollup-plugin-preserve-directives'
 import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 
@@ -16,7 +17,11 @@ export default defineConfig({
   plugins: [
     react(),
     dts({
-      rollupTypes: true,
+      // rollupTypes: true,
+      beforeWriteFile: (filePath, content) => {
+        writeFileSync(filePath.replace('.d.ts', '.d.cts'), content)
+        return { filePath, content }
+      },
     }),
   ],
   resolve: {
@@ -41,6 +46,7 @@ export default defineConfig({
         'react/jsx-runtime',
         ...Object.keys(globals),
       ],
+      plugins: [preserveDirectives({})],
     },
   },
 })
