@@ -27,18 +27,28 @@
   "publishConfig": {
     "main": "dist/index.cjs",
     "module": "dist/index.js",
-    "types": "types/index.d.ts",
+    "types": "dist/index.d.ts",
     "exports": {
       ".": {
-        "type": "./dist/index.d.ts",
         "import": "./dist/index.js",
         "require": "./dist/index.cjs"
       },
       "./helper": {
-        "type": "./dist/helper.d.ts",
         "import": "./dist/helper.js",
         "require": "./dist/helper.cjs"
-      }
+      },
+      "./*": [
+        "./*",
+        "./*.d.ts"
+      ]
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./*"
+      ]
     }
   },
   "husky": {
@@ -70,8 +80,8 @@
     "@innei/eslint-config-react-ts": "0.12.4",
     "@innei/eslint-config-ts": "0.12.4",
     "@innei/prettier": "0.12.4",
-    "@types/node": "20.11.27",
-    "@types/react": "18.2.65",
+    "@types/node": "20.11.28",
+    "@types/react": "18.2.66",
     "@vitejs/plugin-react": "4.2.1",
     "husky": "9.0.11",
     "lint-staged": "15.2.2",
@@ -86,14 +96,14 @@
     "vite": "5.1.6",
     "vite-plugin-dts": "3.7.3",
     "vite-tsconfig-paths": "4.3.2",
-    "vitest": "1.3.1"
+    "vitest": "1.4.0"
   },
   "peerDependencies": {
     "clsx": "*",
     "tailwind-merge": "^2"
   },
   "dependencies": {
-    "clsx": "*",
-    "tailwind-merge": "^2"
+    "clsx": "^2.1.0",
+    "tailwind-merge": "^2.2.1"
   }
 }

@@ -6,7 +6,7 @@ module.exports = {
   content: [
     "app/**/*.{ts,tsx}",
     "components/**/*.{ts,tsx}",
-    "./node_modules/rc-modal-sheet/src/**/*.{ts,tsx}",
+    "./node_modules/rc-modal-sheet/**/*.js",
   ],
   theme: {
     container: {

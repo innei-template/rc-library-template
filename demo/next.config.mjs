@@ -6,7 +6,6 @@ import remarkMdxFrontmatter from "remark-mdx-frontmatter"
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: false,
-  transpilePackages: ["rc-modal-sheet"],
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
 }
 
