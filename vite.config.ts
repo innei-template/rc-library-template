@@ -37,6 +37,7 @@ export default defineConfig({
       ],
       formats: ['cjs', 'es'],
     },
+
     rollupOptions: {
       external: [
         'react',
@@ -46,6 +47,9 @@ export default defineConfig({
         'react/jsx-runtime',
         ...Object.keys(globals),
       ],
+      output: {
+        preserveModules: true,
+      },
       plugins: [preserveDirectives({})],
     },
   },
