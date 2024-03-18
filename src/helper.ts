@@ -1,1 +1,1 @@
-export { clsxm } from './lib/helper'
+export { clsxm } from './lib/helper.js'
