@@ -15,6 +15,7 @@
     "module": "esnext",
     "moduleResolution": "Bundler",
     "resolveJsonModule": true,
+    "target": "ES2022",
     "isolatedModules": true,
     "jsx": "preserve",
     "baseUrl": ".",

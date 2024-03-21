@@ -73,7 +73,8 @@
     "prebuild": "rm -rf lib && rm -rf esm",
     "build": "vite build && tailwindcss -i src/tw.css -o dist/index.css",
     "prepare": "husky install",
-    "release": "bump"
+    "release": "bump",
+    "dev": "vite build --watch"
   },
   "devDependencies": {
     "@innei/bump-version": "1.5.10",
