@@ -55,23 +55,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
             href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
             rel="stylesheet"
           />
-          <link
-            rel="stylesheet"
-            href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/prism-themes/1.9.0/prism-one-dark.css"
-          />
-          <link
-            href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/prism/1.23.0/plugins/line-numbers/prism-line-numbers.min.css"
-            rel="stylesheet"
-          />
-          <Script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/prism/1.23.0/components/prism-core.min.js" />
-          <Script
-            src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js"
-            async
-          />
-          <Script
-            src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/prism/1.23.0/plugins/line-numbers/prism-line-numbers.min.js"
-            async
-          />
         </head>
         <body className={"bg-background min-h-screen font-sans antialiased"}>
           <ThemeProvider>
